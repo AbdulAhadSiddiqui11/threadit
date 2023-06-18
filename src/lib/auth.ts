@@ -38,12 +38,16 @@ export const authOptions: NextAuthOptions = {
         },
       })
 
+      // console.log("user exists", dbUser, token);
+
       if (!dbUser) {
         token.id = user!.id
+        // console.log("user doesnt' exists'", dbUser, token);
         return token
       }
 
       if (!dbUser.username) {
+        // console.log("user doesn't have username", dbUser, token);
         await db.user.update({
           where: {
             id: dbUser.id,
