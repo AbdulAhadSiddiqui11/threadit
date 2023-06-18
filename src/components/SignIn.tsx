@@ -14,7 +14,7 @@ const SignIn: FC = () => {
                     alt='ThreadIt'
                     width={35}
                     height={35}
-                    className='mx-auto h-6 w-6'
+                    className='mx-auto h-12 w-12'
                 />
                 <h1 className='text-2xl font-semibold tracking-tight'>Welcome back</h1>
                 <p className='text-sm max-w-xs mx-auto'>
